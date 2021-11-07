@@ -1,0 +1,35 @@
+.grad {
+    background-image: linear-gradient(to bottom, #e1eef8, #b5d4eb) !important;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 15px;
+}
+
+.summit-btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 15px;
+    background-color: #e9e3e3;
+}
+
+input.ng-invalid.ng-touched {
+    border-left: 5px solid #a94442;
+}
+
+input.ng-valid.ng-dirty {
+    border-left: 5px solid #42A948;
+}
+
+.check {
+    color: #42A948;
+}
+
+.uncheck {
+    color: #a94442;
+}

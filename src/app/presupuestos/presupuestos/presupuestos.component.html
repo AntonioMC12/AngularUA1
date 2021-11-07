@@ -1,0 +1,39 @@
+<div class="loading" *ngIf="!this.ready">Loading&#8230;</div>
+<div class="grad">
+    <h1>Presupuestos</h1>
+    <button class="btn btn-primary" routerLink="/addpres" style="float: right;">Añadir
+        nuevo presupuesto</button>
+    <br>
+    <table class="table table-bordered table-striped tabla" style="margin-top: 
+    40px;">
+        <thead>
+            <tr class="filters">
+                <th>Proveedor</th>
+                <th>Fecha</th>
+                <th>Concepto</th>
+                <th>Base</th>
+                <th>IVA</th>
+                <th class="text-right">Total</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let presupuesto of presupuestos">
+                <td>{{ presupuesto.proveedor }}</td>
+                <td>{{ presupuesto.fecha }}</td>
+                <td>{{ presupuesto.concepto }}</td>
+                <td>{{ presupuesto.base }}</td>
+                <td>{{ presupuesto.iva }}</td>
+                <td>{{ presupuesto.total }}</td>
+                <td>
+                    <button class="btn btn-success" routerLink='/editpres/{{presupuesto.key}}'>Editar</button>
+
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="eliminarPresupuesto(presupuesto.key)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

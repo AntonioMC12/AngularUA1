@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd !important;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Compras App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="this.authService.isLogged">
+                    <a class=" nav-link" aria-current="page" routerLink="/inicio">Inicio</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" *ngIf="this.authService.isLogged">
+                    <a class=" nav-link" routerLink="/proveedores">Proveedores</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" *ngIf="this.authService.isLogged">
+                    <a class=" nav-link" routerLink="/presupuestos">Presupuestos</a>
+                </li>
+                <li class="nav-item" *ngIf="!this.authService.isLogged">
+                    <button class=" btn btn-primary float-md-right" routerLink="/iniciosesion">Inicie sesión</button>
+                </li>
+                <li class="nav-item" *ngIf="this.authService.isLogged">
+                    <button class="btn btn-primary float-md-right" (click)="onLogout()">Cerrar sesión</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

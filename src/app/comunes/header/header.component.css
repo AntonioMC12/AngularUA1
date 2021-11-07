@@ -1,0 +1,11 @@
+nav {
+    margin-bottom: 40px;
+}
+
+.active {
+    font-weight: bolder !important;
+}
+
+.disabled {
+    font-weight: lighter !important;
+}
